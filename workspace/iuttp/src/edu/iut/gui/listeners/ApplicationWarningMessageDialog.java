@@ -8,6 +8,9 @@ public class ApplicationWarningMessageDialog extends
 	@Override
 	protected void showMessage(String level, String message) {
 		/** UTILISER l'AIDE FORUNIR DANS L'ENNONCE */
+		if(level=="[WARNING]"){
+			new JOptionPane(message, WARNING_MESSAGE);
+		}
 	}
 
 }

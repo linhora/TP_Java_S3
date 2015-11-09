@@ -8,6 +8,9 @@ public class ApplicationErrorMessageDialog extends
 	@Override
 	protected void showMessage(String level, String message) {
 		/** UTILISER l'AIDE FORUNIR DANS L'ENNONCE */
+		if(level=="[ERROR]"){
+			new JOptionPane(message,ERROR_MESSAGE);
+		}
 	}
 
 }
