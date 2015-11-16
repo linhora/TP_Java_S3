@@ -8,8 +8,8 @@ import java.util.logging.Logger;
 public class ApplicationSession {
 	
 	// Exercice 1 : Gérer l'internationation
-	protected ResourceBundle resourceBundle;
-	protected Locale locale;
+	protected /* Objet permettant la gestion des 'resources bundle' */ resourceBundle;
+	protected /* Objet permettant la gestion des Locales */ locale;
 	
 	// Exercice 2 : Logger
 	protected Logger sessionGuiLogger;
@@ -19,14 +19,14 @@ public class ApplicationSession {
 	private static ApplicationSession session = null;
 	private ApplicationSession() {
 		/* Definir US comme locale par défaut */
-		Locale.setDefault(Locale.US);
+		Locale.US
 		
 		locale = Locale.getDefault();
-		resourceBundle = ResourceBundle.getBundle("res.properties", locale);
-		sessionGuiLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-		sessionGuiLogger.setLevel(Level.ALL);
-		sessionExceptionLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-		sessionExceptionLogger.setLevel(Level.ALL);
+		resourceBundle = /* à compléter */
+		sessionGuiLogger = /* Initialiser le logger */
+		sessionGuiLogger.setLevel(/* Touls les message doivent être affiché */));
+		sessionExceptionLogger = /* Logger pour exception */
+		sessionExceptionLogger.setLevel(/* Touls les message doivent être affiché */);
 	}
 	
 	

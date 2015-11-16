@@ -2,7 +2,6 @@ package edu.iut.exceptions;
 
 // Exercice 2 
 public class IUTException extends Exception{
-	
 	public IUTException() {
 		super();
 		// Logger une erreur avec le message empty en utilisant le singleton session, ie le logger défini dans la session */

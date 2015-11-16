@@ -22,11 +22,11 @@ public class ApplicationSession {
 		Locale.setDefault(Locale.US);
 		
 		locale = Locale.getDefault();
-		resourceBundle = ResourceBundle.getBundle("res.properties", locale);
-		sessionGuiLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-		sessionGuiLogger.setLevel(Level.ALL);
-		sessionExceptionLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-		sessionExceptionLogger.setLevel(Level.ALL);
+		resourceBundle = /* à compléter */
+		sessionGuiLogger = /* Initialiser le logger */
+		sessionGuiLogger.setLevel(/* Touls les message doivent être affiché */));
+		sessionExceptionLogger = /* Logger pour exception */
+		sessionExceptionLogger.setLevel(/* Touls les message doivent être affiché */);
 	}
 	
 	

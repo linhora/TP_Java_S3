@@ -2,6 +2,7 @@ package edu.iut.exceptions;
 
 // Exercice 2 
 public class IUTException extends Exception{
+	IUT
 	
 	public IUTException() {
 		super();
