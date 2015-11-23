@@ -29,6 +29,11 @@ public class Person {
 				  String email,
 				  String phone) {
 		/* EX2: initialisation */;
+		this.personFunction=personFunction;
+		this.firstname=firstname;
+		this.lastname=lastname;
+		this.email=email;
+		this.phone=phone;
 	}
 	
 	public void setFunction(PersonFunction function) {
