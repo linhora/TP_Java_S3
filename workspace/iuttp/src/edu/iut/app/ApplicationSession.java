@@ -47,7 +47,7 @@ public class ApplicationSession {
 	public void setLocale(Locale locale){
 		this.locale = locale;
 		Locale.setDefault(this.locale);
-		resourceBundle=/* récupérer les resources */
+		resourceBundle= ResourceBundle.getBundle(baseName, locale)
 	}
 	
 	public String getString(String key) {
