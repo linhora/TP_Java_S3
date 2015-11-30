@@ -53,7 +53,7 @@ public class ExamEvent {
 	}
 
 	public void setDocuments(ArrayList<Document> documents) {
-		this.documents = documents;
+		this.documents = documents;	
 	}
 	
 

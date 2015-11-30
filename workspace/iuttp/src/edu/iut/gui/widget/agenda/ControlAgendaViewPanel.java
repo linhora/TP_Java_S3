@@ -30,6 +30,7 @@ public class ControlAgendaViewPanel extends JPanel {
 		this.agendaViewLayout = layerLayout;
 		this.contentPane = contentPane;
 		/** EX3: REMPLACEMENT DU BOUTON NEXT */
+		
 	}
 	
 	public int getYear() {

@@ -1,0 +1,34 @@
+package edu.iut.gui.widget.agenda;
+
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
+public class MenuPanel extends JMenuBar {
+	JMenu menuFile;
+	JMenu menuEdit;
+	JMenu menuHelp;
+	JMenu menuView;
+	
+	JMenuItem menuILoad;
+	JMenuItem menuISave;
+	JMenuItem menuIQuit;
+	JMenuItem menuIMonth;
+	JMenuItem menuIWeek;
+	JMenuItem menuIDay;
+	JMenuItem menuIDisplay;
+	JMenuItem menuIAbout;
+	
+	public MenuPanel(){
+		super();
+		menuFile=new JMenu("File");
+		menuEdit=new JMenu("Edit");
+		menuHelp=new JMenu("Help");
+		add(menuFile);
+		add(menuEdit);
+		add(menuHelp);
+	}
+	
+	
+	
+}

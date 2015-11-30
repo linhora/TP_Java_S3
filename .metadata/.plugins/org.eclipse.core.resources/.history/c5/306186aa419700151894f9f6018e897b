@@ -1,0 +1,42 @@
+package edu.iut.gui.listeners;
+
+import java.awt.CardLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+
+import edu.iut.gui.frames.SchedulerFrame;
+import edu.iut.gui.widget.agenda.AgendaPanelFactory;
+import edu.iut.gui.widget.agenda.AgendaPanelFactory.ActiveView;
+
+public class ApplicationChangeView implements ActionListener{
+
+	CardLayout layout;
+	JPanel parent;
+	
+	public ApplicationChangeView(CardLayout layout,JPanel parent) {
+		this.layout=layout;
+		this.parent=parent;
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		String nomItem;
+		nomItem= ((JMenuItem)e.getSource()).getText();
+		switch(nomItem){
+		case "Month":
+			layout.show(parent,ActiveView.MONTH_VIEW.name());
+			break;
+		case "Week":
+			layout.show(parent, ActiveView.WEEK_VIEW.name());
+			break;
+		case "Day":
+			layout.show(parent, ActiveView.DAY_VIEW.name());
+			break;
+		}
+	}
+	
+
+}

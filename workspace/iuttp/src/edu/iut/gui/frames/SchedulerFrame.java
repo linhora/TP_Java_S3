@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 
+import edu.iut.gui.listeners.ApplicationChangeView;
 import edu.iut.gui.widget.agenda.AgendaPanelFactory;
 import edu.iut.gui.widget.agenda.ControlAgendaViewPanel;
 import edu.iut.gui.widget.agenda.AgendaPanelFactory.ActiveView;
@@ -46,15 +47,56 @@ public class SchedulerFrame extends JFrame {
 		this.setContentPane(splitPane);
 		
 		JMenuBar menuBar = new JMenuBar();
-		JMenu menu;		
-		JMenuItem menuItem;
+		JMenu menuFile;
+		JMenu menuEdit;
+		JMenu menuHelp;
+		JMenu menuView;
+		
+		JMenuItem menuILoad;
+		JMenuItem menuISave;
+		JMenuItem menuIQuit;
+		JMenuItem menuIMonth;
+		JMenuItem menuIWeek;
+		JMenuItem menuIDay;
+		JMenuItem menuIDisplay;
+		JMenuItem menuIAbout;
 		
 		/* File Menu */
 		/** EX4 : MENU : UTILISER L'AIDE FOURNIE DANS LE TP**/
+		menuFile=new JMenu("File");
+		menuEdit=new JMenu("Edit");
+		menuHelp=new JMenu("Help");
+		menuBar.add(menuFile);
+		menuBar.add(menuEdit);
+		menuBar.add(menuHelp);
 		
+		menuILoad = new JMenuItem("Load");
+		menuISave = new JMenuItem("Save");
+		menuIQuit = new JMenuItem("Quit");
 		
-		menu = new JMenu("File");
+		menuFile.add(menuILoad);
+		menuFile.add(menuISave);
+		menuFile.add(menuIQuit);
 		
+		menuView=new JMenu("View");
+		menuEdit.add(menuView);
+		ApplicationChangeView l=new ApplicationChangeView(layerLayout, contentPane);
+		menuIMonth = new JMenuItem("Month");
+		menuIMonth.addActionListener(l);
+		menuIWeek = new JMenuItem("Week");
+		menuIWeek.addActionListener(l);
+		menuIDay = new JMenuItem("Day");
+		menuIDay.addActionListener(l);
+		
+		menuView.add(menuIMonth);
+		menuView.add(menuIWeek);
+		menuView.add(menuIDay);
+		
+		menuIDisplay=new JMenuItem("Display");
+		menuIAbout=new JMenuItem("About");
+		
+		menuHelp.add(menuIDisplay);
+		menuHelp.add(menuIAbout);
 		
 		this.setJMenuBar(menuBar);
 		this.pack();
